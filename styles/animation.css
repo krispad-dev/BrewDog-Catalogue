@@ -2,7 +2,7 @@
 
 .header-display {
   height: 25vh;
-  background-image: url(/header.png);
+  background-image: url(https://krispad-dev.github.io/brewdog-catalogue/header.png);
   background-color: var(--white);
   background-position: center;
   background-size: cover;
