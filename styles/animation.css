@@ -1,0 +1,98 @@
+/* Header */
+
+.header-display {
+  height: 25vh;
+  background-image: url(/header.png);
+  background-color: var(--white);
+  background-position: center;
+  background-size: cover;
+  transform: translateZ(20%);
+  transition: 0.4s;
+  animation: open 0.4s 0s ease-in-out;
+}
+
+@keyframes open {
+  0% {
+    height: 0vh;
+  }
+  100% {
+    height: 25vh;
+  }
+}
+
+.header-hide {
+  display: flex;
+  background-position: center;
+  background-size: cover;
+  transform: translateZ(20%);
+  transition: 1s;
+  animation: close 0.4s 0s ease-in-out;
+}
+
+@keyframes close {
+  0% {
+    height: 25vh;
+  }
+  100% {
+    height: 0vh;
+  }
+}
+
+.not-visible {
+  visibility: hidden;
+  position: absolute;
+}
+
+/* Grid container */
+
+.move-grid-container {
+  transform: translateY(-40%);
+  transition: 0.6s;
+}
+.move-grid-container-back {
+  transform: translateY(0%);
+  transition: 0.6s;
+}
+
+.box-fade0 {
+  opacity: 1;
+  animation: fade 1s linear;
+}
+
+@keyframes fade {
+  0%,
+  100% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* Loader */
+
+div.loader-animation-container {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+div.loader-animation-container img {
+  width: 50px;
+  color: white;
+  animation: rotation 2s infinite linear;
+  align-self: center;
+}
+
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
+  }
+}

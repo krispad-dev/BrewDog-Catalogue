@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- First finished version 1.0 -->
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.2/css/all.css"
+        integrity="sha384-vSIIfh2YWi9wW0r9iZe7RJPrKwp6bG+s9QZMoITbCckVJqGCCRhc+ccxNcdpHuYu" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles/grid.css">
+    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="stylesheet" href="styles/animation.css">
+    <link rel="stylesheet" href="styles/queries.css">
+    <script type="module" src="js/app.js" defer></script>
+    <title>BrewDog Catalogue</title>
+</head>
+
+<body>
+    <!-- static header -->
+    <header class="header-hide"><i class="fas fa-ellipsis-v"></i>
+        <div class="header-container not-visible">
+
+            <!-- logo section -->
+            <section class="logo">
+                <h1></h1>
+            </section>
+
+            <!-- search section -->
+            <section class="search">
+                <button id="reload-random"><i class="fas fa-random"></i></button>
+                <select name="searchType" id="search-type">
+                    <option value="beer_name">Beer Name</option>
+                    <option value="food">Food Pairing</option>
+                </select>
+                <input type="text" id="search">
+                <i class="fas fa-search"></i>
+            </section>
+        </div>
+    </header>
+
+    <!-- Dynamic content section -->
+    <main>
+        <section class="main-section">
+            <div class="grid-container">
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Static footer -->
+    <footer>
+        <p>BrewDog Catalogue</p><small>&copy;Kristofer Padoan 2021</small>
+    </footer>
+</body>
+
+</html>
