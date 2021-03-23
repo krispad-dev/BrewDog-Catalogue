@@ -96,3 +96,10 @@ div.loader-animation-container img {
     transform: rotate(359deg);
   }
 }
+
+.pointer-events-on {
+  pointer-events: all;
+}
+.pointer-events-off {
+  pointer-events: none;
+}

@@ -1,8 +1,10 @@
 
+const body = document.querySelector('body')
 const searchInput = document.querySelector('#search');
 const searchTypeElement = document.querySelector('#search-type');
 const gridContainer = document.querySelector('.grid-container');
 const placeholderImg = 'images/placehold_beer.png';
+
 
 export const contentHandler = () => {
 
@@ -69,7 +71,10 @@ export const contentHandler = () => {
             boxes.forEach((box, i) => {
                 box.addEventListener('click', () => {
                     box.classList.toggle(`box-change`);
+                    body.classList.toggle(`pointer-events-off`);
+                    box.classList.toggle(`pointer-events-on`);
                     infoHidden[i].classList.toggle('info-show');
+
                 });
             });
         });
