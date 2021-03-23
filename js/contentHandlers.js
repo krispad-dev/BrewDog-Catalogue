@@ -1,5 +1,5 @@
 
-const body = document.querySelector('body')
+const body = document.querySelector('body');
 const searchInput = document.querySelector('#search');
 const searchTypeElement = document.querySelector('#search-type');
 const gridContainer = document.querySelector('.grid-container');
