@@ -1,11 +1,11 @@
-
+// Variables
 const body = document.querySelector('body');
 const searchInput = document.querySelector('#search');
 const searchTypeElement = document.querySelector('#search-type');
 const gridContainer = document.querySelector('.grid-container');
 const placeholderImg = 'images/placehold_beer.png';
 
-
+// Function wrapper
 export const contentHandler = () => {
 
     // Stores requested data fron server
@@ -14,23 +14,23 @@ export const contentHandler = () => {
     // Get random data
     const getRandomData = async () => {
 
-        for (let i = 0; i < 7; ++i) {
+        for (let i = 0; i < 7; ++i) { // Loop for collecting random get-requests
             const res = await fetch('https://api.punkapi.com/v2/beers/random');
             const randomData = await res.json();
             beers.push(randomData[0]);
         };
-        displayData(beers);
+        displayData(beers); // Calls display data function
     };
-    getRandomData().catch(err => console.error(err));
+    getRandomData().catch(err => console.error(err)); // Error handling
 
 
     // Get searched data
     searchInput.addEventListener('keyup', (e) => {
-        beers = [];
-        let searchType = searchTypeElement.value;
-        let keyInput = e.target.value;
-        let keyChar = e.key;
-        keyChar === 'Backspace' ? keyInput = ' ' : keyInput;
+        beers = []; // Dumps beer-array 
+        let searchType = searchTypeElement.value; // Stores input type
+        let keyInput = e.target.value; // Stores value of user input when searching
+        let keyChar = e.key; // Stores single char when key press 
+        keyChar === 'Backspace' ? keyInput = ' ' : keyInput; // Conditioan for dumping array when pressing backspase
 
 
 
@@ -38,16 +38,16 @@ export const contentHandler = () => {
             const res = await fetch(`https://api.punkapi.com/v2/beers?${searchType}=${keyInput}&per_page=7`);
             const searchedData = await res.json();
             beers.push(searchedData);
-            displayData(beers[0]);
+            displayData(beers[0]); // Calls display data function
         };
-        getSearchedData().catch(err => console.error(err));
+        getSearchedData().catch(err => console.error(err)); // Error handling
     });
 
 
-    // Display searched data
+    // Display data
     const displayData = (beers) => {
 
-        gridContainer.innerHTML = ' ';
+        gridContainer.innerHTML = ' '; // Clears content section 
 
         beers.forEach((beer, i) => {
 
@@ -68,8 +68,8 @@ export const contentHandler = () => {
             </section >`;
             const boxes = document.querySelectorAll('.box');
             const infoHidden = document.querySelectorAll('.hidden');
-            boxes.forEach((box, i) => {
-                box.addEventListener('click', () => {
+            boxes.forEach((box, i) => { // Add event listeners to grid boxes
+                box.addEventListener('click', () => { // Toggles where you can click on the screen, adding hidden information about cards and presents single bigger box.
                     box.classList.toggle(`box-change`);
                     body.classList.toggle(`pointer-events-off`);
                     box.classList.toggle(`pointer-events-on`);

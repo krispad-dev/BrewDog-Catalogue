@@ -1,5 +1,7 @@
-import { contentHandler } from './contentHandlers.js';
+import { contentHandler } from './contentHandlers.js'; // Imports content handler 
 
+
+// Adding variables
 const gridContainer = document.querySelector('.grid-container');
 const header = document.querySelector('header');
 const menuBtn = document.querySelector('.fa-ellipsis-v');
@@ -33,14 +35,14 @@ randomBtn.onclick = () => {
 
 
 // Animation-selector for header and grid container 
-menuBtn.addEventListener('click', () => {
+menuBtn.addEventListener('click', () => { // Header hide
     if (header.classList.contains('header-display')) {
         header.classList.add('header-hide');
         header.classList.remove('header-display');
         gridContainer.classList.add('move-grid-container-back');
         headerContainer.classList.add('not-visible');
 
-    } else {
+    } else { // Header show
         header.classList.add('header-display');
         header.classList.remove('header-hide');
         gridContainer.classList.add('move-grid-container');
