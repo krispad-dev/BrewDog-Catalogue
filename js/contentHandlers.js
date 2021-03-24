@@ -46,27 +46,40 @@ export const contentHandler = () => {
 
 
     // Display searched data
-    const displayData = (beers) => {
+    const displayData = beers => {
 
         gridContainer.innerHTML = ' ';  // Clears content section 
 
         beers.forEach((beer, i) => {
 
-            const { name, image_url, tagline, description, food_pairing, ph } = beer;
+
+            const { name, image_url, tagline, description, food_pairing, ph } = beer; // Deconstructed object
+
 
             gridContainer.innerHTML += `
             <section style="background-image: url(${image_url ? image_url : placeholderImg});" class="box-${i + 1} box">
-            <div class="box-text-wrapper">
-            <h2 id="name">${name}</h2>
-            <p id="tagline"><span>"${tagline}"</span></p>
-            <div class="hidden">
-            <p id="description">${description}</p>
-            <p id="food-pairing"><em>Food pairing tips: ${food_pairing.join(' - ')}</em></p>
-            <p id="alc">Vol. ${ph}%</p>
-            </div>
-            </div>
-            <div></div>
+                <div class="box-text-wrapper">
+                    <h2 id="name">${name}</h2> 
+
+                    <p id="tagline"><span>"${tagline}"</span></p>
+
+                    <div class="hidden">
+                        <p id="description">${description}</p>
+
+                        <p id="alc"><i class="fas fa-glass-whiskey"></i> Vol. ${ph}%</p>
+
+                        <p class="food-pairing-text"><i class="fas fa-utensils"></i> FOOD PAIRING TIP :</p>
+
+                        <ul class="food-pairing">
+                            <li>${food_pairing[0]}.</li>
+                            <li>${food_pairing[1]}.</li>
+                            <li>${food_pairing[2]}.</li>
+                        </ul>
+
+                    </div>
+                </div>
             </section >`;
+
             const boxes = document.querySelectorAll('.box');
             const infoHidden = document.querySelectorAll('.hidden');
             boxes.forEach((box, i) => { // Add event listeners to grid boxes
@@ -81,4 +94,6 @@ export const contentHandler = () => {
         });
     };
 };
+
+
 
