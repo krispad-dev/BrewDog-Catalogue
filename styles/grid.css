@@ -2,10 +2,9 @@ div.grid-container {
   width: 100%;
   max-width: 100rem;
   position: absolute;
-
   display: grid;
   gap: 0.5rem;
-  border-radius: 2px;
+  border-radius: 3px;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-template-rows: 33vh 33vh;
   grid-template-areas:
@@ -92,7 +91,8 @@ div.box-text-wrapper {
 }
 
 span {
-  background-color: black;
+  background-color: #151515;
+  font-size: 1.2rem;
 }
 
 p#description {
