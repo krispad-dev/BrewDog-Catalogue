@@ -191,3 +191,26 @@ footer {
   display: flex;
   justify-content: space-between;
 }
+
+div.links-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+}
+
+a {
+  font-size: 1.5rem;
+  color: var(--white);
+  margin: 0rem 0.5rem;
+  vertical-align: middle;
+}
+
+footer a i {
+  vertical-align: middle;
+  color: var(--icon-color);
+}
+footer a i:hover {
+  color: var(--white);
+  transition: 0.2s;
+}
