@@ -52,9 +52,7 @@ export const contentHandler = () => {
 
         beers.forEach((beer, i) => {
 
-
             const { name, image_url, tagline, description, food_pairing, ph } = beer; // Deconstructed object
-
 
             gridContainer.innerHTML += `
             <section style="background-image: url(${image_url ? image_url : placeholderImg});" class="box-${i + 1} box">
