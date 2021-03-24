@@ -86,7 +86,7 @@ h1 {
 h2 {
   font-family: "Roboto", sans-serif;
   color: var(--white);
-  font-size: 1.8rem;
+  font-size: 1.5rem;
   font-weight: 1;
   padding: 0.5rem;
   margin-left: 1rem;
@@ -188,14 +188,12 @@ ul.food-pairing li {
 /* Footer */
 
 small {
-  text-align: center;
-  font-family: sans-serif;
   font-size: 10px;
   display: flex;
-  justify-content: flex-end;
   color: #d2dae2;
+  align-self: center;
+  font-family: "Roboto", sans-serif;
   margin-right: 1rem;
-  padding: 1rem;
 }
 
 footer {
@@ -206,7 +204,7 @@ footer {
   background-color: var(--background-color);
   overflow: hidden;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
 }
 
 div.links-container {
@@ -219,15 +217,22 @@ div.links-container {
 a {
   font-size: 1.5rem;
   color: var(--white);
-  margin: 0rem 0.5rem;
   vertical-align: middle;
 }
 
 footer a i {
   vertical-align: middle;
   color: var(--icon-color);
+  margin: 0rem 0.3rem;
 }
 footer a i:hover {
   color: var(--white);
   transition: 0.2s;
+}
+
+footer p {
+  margin: 0;
+  padding: 0;
+  align-self: center;
+  padding-left: 1rem;
 }

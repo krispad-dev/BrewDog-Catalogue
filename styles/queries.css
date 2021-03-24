@@ -1,4 +1,24 @@
 @media (max-width: 1000px) {
+  footer {
+    overflow: hidden;
+  }
+  body {
+    overflow: hidden;
+  }
+
+  a {
+    font-size: 1rem;
+    color: var(--white);
+    margin: 0rem 0.5rem;
+    vertical-align: middle;
+  }
+
+  footer p {
+    font-size: 0.7rem;
+    vertical-align: middle;
+    align-self: center;
+  }
+
   .fas.fa-ellipsis-v {
     display: none;
   }
@@ -15,6 +35,7 @@
   header {
     display: flex;
     justify-content: center;
+    overflow: hidden;
   }
 
   div.header-container {
@@ -61,10 +82,6 @@
   * {
     overflow-y: visible;
     overflow-x: hidden;
-  }
-
-  body {
-    overflow-y: hidden;
   }
 
   section.main-section {
